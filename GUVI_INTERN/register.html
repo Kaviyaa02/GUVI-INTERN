@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUVI_Register</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+  <ul class="nav justify-content-end">
+    <li class="nav-item bg-gradient">
+      <a class="nav-link text-dark" aria-current="page" href="./">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-dark" href="./login.html">Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-dark" href="./register.html">Register</a>
+    </li>
+  </ul>
+
+    <section class="vh-100 bg-image">
+
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-sm-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-4">
+                                <h2 class="text-uppercase text-center sm-2">Create an account</h2>
+
+                                <form id="myForm" action="" class="login_form" method="post">
+
+
+                                    
+                                    <div class="form-outline mb-2">
+                                        <label class="form-label" for="email"> Email</label>
+                                        <input type="email" id="email" class="form-control form-control-medium"
+                                            name="email" required />
+                                        
+                                    </div>
+
+                    
+                                
+
+                                    <div class="form-outline mb-2">
+                                        <label class="form-label" for="password">Password</label>
+                                        <input type="password" id="password" class="form-control form-control-medium"
+                                            name="password"minlength="8" required />
+
+                                        
+                                    </div>
+
+                                    <div class="form-outline mb-2">
+                                        <label class="form-label" for="confirmpassword">Re-Enter your password</label>
+                                        <input type="password" id="confirmpassword"
+                                            class="form-control form-control-medium" name="upswd2" minlength="8" required />
+
+                                        
+                                    </div>
+
+                                    <div class="d-flex justify-content-center">
+                                        <button type="submit" id="submit"
+                                            class="btn bs-gray-dark btn-block btn-lg gradient-custom-4 text-body">Submit</button>
+                                    </div>
+
+                                    <p class="text-center text-muted mt-3 mb-0">Already have an account? <a href="#!"
+                                            class="fw-bold text-body"><a href="./login.html"><u>Login</u></a></a></p>
+
+                          </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <section class="d-none" id="profilecard">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div
+              class="modal fade"
+              id="profileInfo"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="myModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">
+                      Profile Details
+                    </h4>
+                  </div>
+                  <div class="modal-body mx-3">
+                    <form id="profile">
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="firstName"
+                              >First Name</label
+                            >
+                            <input
+                              type="text"
+                              id="firstName"
+                              required
+                              class="form-control form-control-lg"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="lastName"
+                              >Last Name</label
+                            >
+                            <input
+                              required
+                              type="text"
+                              id="lastName"
+                              class="form-control form-control-lg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="row">
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+                          <div class="form-outline datepicker w-100">
+                            <label for="birthdayDate" class="form-label"
+                              >Birthday</label
+                            >
+                            <input
+                              type="date"
+                              class="form-control form-control-lg"
+                              required
+                              id="birthdayDate"
+                            />
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="row">
+                        <div class="col-md-6 mb-4 pb-2">
+                          <div class="form-outline">
+                            <label class="form-label" for="place">Place</label>
+                            <input
+                              type="text"
+                              required
+                              id="place"
+                              class="form-control form-control-lg"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4 pb-2">
+                          <div class="form-outline">
+                            <label class="form-label" for="phoneNumber"
+                              >Phone Number</label
+                            >
+                            <input
+                              type="tel"
+                              inputmode="numeric"
+                              required
+                              id="phoneNumber"
+                              class="form-control form-control-lg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="mt-4 pt-2">
+                        <input
+                          class="btn btn-primary btn-lg"
+                          type="submit"
+                          id="profile-btn"
+                          value="Submit"
+                        />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="./js/register.js"></script>
+    </body>
+
+
+</html>
